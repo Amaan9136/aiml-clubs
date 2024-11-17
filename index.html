@@ -1,0 +1,632 @@
+<!-- prompt: remove unnessary js using this html-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>AIML Clubs</title>
+  <link rel="icon" href="img/AIML LOGO WHITE.png" type="png">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="MobileOptimized" content="320">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/preloader.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgb(31, 31, 31);
+      /* Set background with opacity */
+      z-index: -1;
+    }
+
+    .content::after {
+      content: "";
+      position: absolute;
+      padding: 1.5px;
+      top: -82px;
+      bottom: -82px;
+      width: 2px;
+      background-color: #ffffff;
+      right: calc(43% - 35px);
+      margin: auto;
+      z-index: 1;
+      height: 100%;
+      opacity: 0.2;
+    }
+
+    .header-logo {
+      border-radius: 0px;
+    }
+
+    @media (min-width: 768px) {
+      .dropdown-content {
+        left: 20%;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <div id="preloader">
+    <img src="img/AIML LOGO WHITE.png" alt="Preloader Image">
+    <!-- add logo png format -->
+  </div>
+
+  <header class="header">
+    <div class="text-white">
+      <img class="header-logo" src="img/AIML LOGO WHITE.png" alt="Logo">
+      AI&ML Clubs
+    </div>
+    <nav class="header-menu-for-desktop">
+
+      <div class="dropdown text-white">
+        <button class="dropbtn text-white">Clubs ▼</button>
+        <div class="dropdown-content">
+          <a href="TechClub/index.html" class="text-white a-text">Technical Club</a>
+          <a href="CulturalClub/index.html" class="text-white a-text">Cultural Club</a>
+          <a href="SocialClub/index.html" class="text-white a-text">Social Club</a>
+          <a href="SportsClub/index.html" class="text-white a-text">Sports Club</a>
+        </div>
+        <a href="login.html" class="text-white a-text">Login</a>
+        <a href="register.html" class="text-white a-text">Register</a>
+        <a href="about.html" class="text-white a-text">About Us</a>
+        <a href="contact.html" class="text-white a-text">Chat with Bot!</a>
+        <a href="AI&ML Clubs.apk" class="text-white a-text" download>Download App</a>
+        <!-- add more -->
+      </div>
+
+    </nav>
+
+    <div class="header-menu-for-mobile">
+      <img src="img/menu.png" alt="Menu" onclick="toggleMenu()">
+      <div class="menu-items">
+
+        <div class="dropdown text-white">
+          <button class="dropbtn text-white a-text" style="margin-left: 10px;">Clubs ▼</button>
+          <div class="dropdown-content">
+            <a href="TechClub/index.html" class="text-white a-text">Technical Club</a>
+            <a href="CulturalClub/index.html" class="text-white a-text">Cultural Club</a>
+            <a href="SocialClub/index.html" class="text-white a-text">Social Club</a>
+            <a href="SportsClub/index.html" class="text-white a-text">Sports Club</a>
+          </div>
+        </div>
+        <hr class="hr-menu">
+        <a href="login.html" class="text-white a-text">Login</a>
+        <a href="register.html" class="text-white a-text">Register</a>
+        <a href="about.html" class="text-white a-text">About Us</a>
+        <a href="contact.html" class="text-white a-text">Chat with Bot!</a>
+        <a href="AI&ML Clubs.apk" class="text-white a-text" download>Download App</a>
+        <!-- add more -->
+
+      </div>
+    </div>
+  </header>
+
+  <div class="content">
+
+    <div class="top-left-container">
+      <p class="text-white2">Recent Events:</p>
+      <!-- Carousel code here -->
+      <div class="carousel slide my-carousel">
+        <div class="carousel-inner">
+          <!-- IMAGES NEED TO BE SIZE OF 650w:300h px -->
+          <div class="carousel-item active ">
+            <img src="img/school.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item active ">
+            <img src="img/nss.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item ">
+            <img src="img/img2.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="hr-neon mobile">
+
+    <div class="top-right-container">
+      <p class="text-white2">Club News & Updates:</p>
+      <!-- News and updates content here -->
+      <!-- remove my-carousel class if dont want auto move -->
+      <div id="carouselClubNews" class="carousel slide my-carousel" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="card2">
+              <div class="card-body">
+                <h5 class="card-title">School Visit</h5>
+                <p class="card-text">
+                  Explore our school through educational trips. Experience hands-on learning and the school environment.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card2">
+              <div class="card-body">
+                <h5 class="card-title">NSS Activity</h5>
+                <p class="card-text">
+                  View our NSS activities, including tree planting, for community and environmental impact. Engage,
+                  nurture, and give back.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card2">
+              <div class="card-body">
+                <h5 class="card-title">E-Sports</h5>
+                <p class="card-text">
+                  Enter the world of competitive E-Sports, where virtual battles unfold. Dive into the strategy, action,
+                  and camaraderie of gaming.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Custom navigation buttons -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselClubNews" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselClubNews" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="content2">
+
+    <hr class="hr-neon">
+
+    <div class="upcoming-container" id="upcoming-container">
+      <p class="text-white2 padd-c2">Upcoming Events:</p>
+      <!-- upcoming-container content here -->
+      <a href="allevents/forms/form1.html" class="btn-status"> <!-- Form Link 1 -->
+        <div class="card">
+          <!-- CARD IMAGE NEED TO BE SIZE OF 600w:200h in px-->
+          <img src="img/img2.jpg" alt="Card Image" class="card-image"> <!--Change image depending on event image-->
+          <div class="card-body">
+            <h5 class="card-title">E-Sports Registration</h5>
+            <p class="card-text">
+              Enter the world of competitive E-Sports, where virtual battles unfold. Dive into the strategy, action, and
+              camaraderie of gaming.
+            </p>
+            <div class="reverse-time-counter" data-date="02/11/2023"> <!--Change date depending on event last date-->
+              <p class="align-c">
+                Last Date: 02/09/2023<br><!--Change date depending on event last date-->
+                <span class="timer"></span><br>
+                <span class="register-text"></span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <!-- 
+      <a href="events/forms/form2.html" class="btn-status"> Form Link 2 
+        <div class="card">
+          <img src="img/img2.jpg" alt="Card Image" class="card-image">
+          <div class="card-body">
+            <h5 class="card-title">UNPLANNED EVENT</h5>
+            <p class="card-text">
+              It is a long established fact that a reader will be distracted by the readable content of a page when
+              looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
+              letters, as opposed to using 'Content here, content here', making it look like readable English.
+            </p>
+            <div class="reverse-time-counter" data-date="05/09/2023">
+              <p class="align-c">
+                Last Date: 05/09/2023<br
+                <span class="timer"></span><br>
+                <span class="register-text"></span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="events/forms/form3.html" class="btn-status"> Form Link 3
+        <div class="card">
+          <img src="img/img2.jpg" alt="Card Image" class="card-image">
+          <div class="card-body">
+            <h5 class="card-title">UNPLANNED EVENT</h5>
+            <p class="card-text">
+              It is a long established fact that a reader will be distracted by the readable content of a page when
+              looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
+              letters, as opposed to using 'Content here, content here', making it look like readable English.
+            </p>
+            <div class="reverse-time-counter" data-date="02/09/2023">
+              <p class="align-c">
+                Last Date: 02/09/2023<br
+                <span class="timer"></span><br>
+                <span class="register-text"></span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+      -->
+    </div>
+    <hr class="hr-neon">
+
+
+    <div class="previous-container" id="previous-container">
+      <p class="text-white2 padd-c2">Previous Events:</p>
+      <!-- previous-container content here -->
+
+      <a href="allevents/event/schoolvisit/index.html" class="btn-status">
+        <div class="card">
+          <img src="img/school.jpg" alt="Card Image" class="card-image">
+          <div class="card-body">
+            <h5 class="card-title">School Visit</h5>
+            <p class="card-text">
+              Explore our school through educational trips. Experience hands-on learning and the school environment.
+            </p>
+          </div>
+        </div>
+      </a>
+      <a href="allevents/event/schoolvisit/index.html" class="btn-status">
+        <div class="card">
+          <img src="img/nss.jpg" alt="Card Image" class="card-image">
+          <div class="card-body">
+            <h5 class="card-title">NSS Activity</h5>
+            <p class="card-text">
+              View our NSS activities, including tree planting, for community and environmental impact. Engage, nurture,
+              and give back.
+            </p>
+          </div>
+        </div>
+      </a>
+      <!-- 
+            <a href="events/forms/form3.html" class="btn-status">
+        <div class="card">
+        <img src="img/img2.jpg" alt="Card Image" class="card-image">
+        <div class="card-body">
+          <h5 class="card-title">CARD TITLE - RANDOM EVENT</h5>
+          <p class="card-text">
+            It is a long established fact that a reader will be distracted by the readable content of a page when
+            looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
+            letters, as opposed to using 'Content here, content here', making it look like readable English.
+          </p>
+        </div>
+      </div>
+    </a> -->
+
+    </div>
+
+    <hr class="hr-neon">
+    <div class="present-container" id="present-container">
+      <p class="text-white2 padd-c2">Ongoing Events:</p>
+      <!-- present-container content here -->
+
+      <!-- <div class="card">
+        <img src="img/img2.jpg" alt="Card Image" class="card-image">
+        <div class="card-body">
+          <h5 class="card-title">CARD TITLE - RANDOM EVENT</h5>
+          <p class="card-text">
+            It is a long established fact that a reader will be distracted by the readable content of a page when
+            looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
+            letters, as opposed to using 'Content here, content here', making it look like readable English.
+          </p>
+        </div>
+      </div> -->
+
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">No Ongoing Events!</h5>
+        </div>
+      </div>
+    </div>
+
+    <hr class="hr-neon">
+
+    <!-- Below content here -->
+    <footer>
+      <div class="footer-content">
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li>
+            <div class="dropdown2">
+              <button class="dropbtn2">Our Projects ▲</button>
+              <div class="dropdown-content2">
+                <a href="https://income.great-site.net/" style="font-weight: normal;">>Netflix Credits</a><br>
+                <a href="Books Stop/index.html" style="font-weight: normal;">>Book Stop</a><br>
+                <a href="agri/index.html" style="font-weight: normal;">>Techno Agrii</a>
+              </div>
+            </div>
+          </li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="copyright">
+        &copy; AMK-TechnicalClub. All rights reserved.
+      </div>
+    </footer>
+  </div>
+
+
+  <script>
+    window.addEventListener('contextmenu', function (e) {
+      e.preventDefault(); // Prevent right-click menu
+    });
+
+    // Function to scroll to the target container with dynamic margin
+    function scrollToContainerWithMargin(containerId) {
+      const headerHeight = document.querySelector('.header').clientHeight;
+      const container = document.getElementById(containerId);
+
+      if (container) {
+        const marginTop = window.innerWidth <= 768 ? -50 : -55; // Adjust margin based on device width
+        const scrollPosition = container.offsetTop - headerHeight - marginTop;
+
+        window.scrollTo({
+          top: scrollPosition,
+          behavior: 'smooth'
+        });
+      }
+    }
+    document.addEventListener('DOMContentLoaded', function () {
+      const menuLinks = document.querySelectorAll('.dropdown-content a');
+
+      function addClickEvent(links) {
+        links.forEach(link => {
+          link.addEventListener('click', function (event) {
+            event.preventDefault();
+            const target = link.getAttribute('href');
+            if (target && target !== '#') {
+              const targetID = target.replace('#', '');
+              scrollToContainerWithMargin(targetID);
+
+              if (target.endsWith('.html')) {
+                window.location.href = target;
+              }
+            }
+
+            if (window.innerWidth <= 768) {
+              toggleMenu(); // Close mobile menu after clicking the link on mobile
+            }
+          });
+        });
+      }
+
+
+      addClickEvent(menuLinks);
+    });
+
+
+    // Function to toggle mobile menu
+    function toggleMenu() {
+      var menuItems = document.querySelector('.menu-items');
+      var menuIcon = document.querySelector('.header-menu-for-mobile img');
+
+      menuItems.classList.toggle('show');
+      menuIcon.src = menuItems.classList.contains('show') ? 'img/menuclose.png' : 'img/menu.png';
+
+      if (menuItems.classList.contains('show')) {
+        for (var i = 0; i < menuTextItems.length; i++) {
+          menuTextItems[i].style.display = 'block';
+        }
+        // Ensure that the "Home" link is always visible when the menu is opened
+        document.querySelector('.menu-items a[href="#"]').style.display = 'block';
+      } else {
+        for (var i = 0; i < menuTextItems.length; i++) {
+          menuTextItems[i].style.display = 'none';
+        }
+      }
+    }
+
+    var menuTextItems = document.querySelectorAll('.menu-items a');
+    // Hide all menu items initially
+    for (var i = 0; i < menuTextItems.length; i++) {
+      menuTextItems[i].style.display = 'none';
+    }
+
+    var dropdownButtons = document.getElementsByClassName('dropbtn');
+    var dropdownContents = document.getElementsByClassName('dropdown-content');
+
+    for (var i = 0; i < dropdownButtons.length; i++) {
+      var dropdownButton = dropdownButtons[i];
+      var dropdownContent = dropdownContents[i];
+
+      dropdownButton.addEventListener('click', function (event) {
+        event.stopPropagation();
+        toggleDropdown(this.nextElementSibling);
+      });
+
+      dropdownButton.addEventListener('mouseover', function (event) {
+        toggleDropdown(this.nextElementSibling);
+      });
+
+      dropdownContent.addEventListener('mouseover', function (event) {
+        toggleDropdown(this);
+      });
+    }
+
+    document.addEventListener('mousemove', function (event) {
+      var dropdowns = document.getElementsByClassName('dropdown-content');
+      var isInsideDropdown = false;
+
+      for (var i = 0; i < dropdowns.length; i++) {
+        var dropdown = dropdowns[i];
+
+        if (dropdown.contains(event.target)) {
+          isInsideDropdown = true;
+          break;
+        }
+      }
+
+      if (!isInsideDropdown && !isCloseToDropdown(event)) {
+        closeDropdowns();
+      }
+    });
+
+    document.addEventListener('click', function (event) {
+      var dropdowns = document.getElementsByClassName('dropdown-content');
+      var isInsideDropdown = false;
+
+      for (var i = 0; i < dropdowns.length; i++) {
+        var dropdown = dropdowns[i];
+
+        if (dropdown.contains(event.target)) {
+          isInsideDropdown = true;
+          break;
+        }
+      }
+
+      if (!isInsideDropdown) {
+        closeDropdowns();
+      }
+    });
+
+    function toggleDropdown(dropdown) {
+      closeDropdowns();
+
+      if (dropdown.style.display === 'none') {
+        dropdown.style.display = 'block';
+      }
+    }
+
+    function closeDropdowns() {
+      var dropdowns = document.getElementsByClassName('dropdown-content');
+
+      for (var i = 0; i < dropdowns.length; i++) {
+        var dropdown = dropdowns[i];
+        dropdown.style.display = 'none';
+      }
+    }
+
+    function isCloseToDropdown(event) {
+      var dropdowns = document.getElementsByClassName('dropdown-content');
+
+      for (var i = 0; i < dropdowns.length; i++) {
+        var dropdown = dropdowns[i];
+        var dropdownRect = dropdown.getBoundingClientRect();
+        var mouseX = event.clientX;
+        var mouseY = event.clientY;
+
+        if (
+          mouseX >= dropdownRect.left - 50 &&
+          mouseX <= dropdownRect.right + 50 &&
+          mouseY >= dropdownRect.top - 50 &&
+          mouseY <= dropdownRect.bottom + 50
+        ) {
+          return true;
+        }
+      }
+
+      return false;
+    }
+
+    // Event listener to close the mobile menu when clicked outside
+    document.addEventListener('click', function (event) {
+      var menuItems = document.querySelector('.menu-items');
+      var menuIcon = document.querySelector('.header-menu-for-mobile img');
+
+      if (menuItems.classList.contains('show')) {
+        if (!event.target.closest('.header-menu-for-mobile') && !event.target.closest('.menu-items')) {
+          menuItems.classList.remove('show');
+          var menuTextItems = document.querySelectorAll('.menu-items a');
+          for (var i = 0; i < menuTextItems.length; i++) {
+            menuTextItems[i].style.display = 'none';
+          }
+          menuIcon.src = 'img/menu.png';
+          menuIcon.classList.remove('hide'); // Show the menu button
+        }
+      }
+    });
+
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Remove the preloader when the page is fully loaded with a 2-second delay
+      window.addEventListener('load', function () {
+        var preloader = document.getElementById('preloader');
+        setTimeout(function () {
+          preloader.style.display = 'none';
+        }, 2000); // 2 seconds delay
+      });
+    });
+
+    //  corosal js 
+    document.addEventListener('DOMContentLoaded', function () {
+      var carousels = document.querySelectorAll('.my-carousel');
+
+      carousels.forEach(function (carousel) {
+        var carouselInstance = new bootstrap.Carousel(carousel, {
+          interval: 4000, // Set the interval time in milliseconds (2 seconds)
+          pause: false, // Disable pausing on mouse hover
+          wrap: true // Enable continuous looping of the carousel
+        });
+
+        // Start the carousel
+        carouselInstance.cycle();
+      });
+    });
+
+    // Function to update countdown timer
+    function updateCountdown(endDate, timerElement, registerElement, atag) {
+      var countDownDate = new Date(endDate.replace(/(\d{2})\/(\d{2})\/(\d{4})/, "$2/$1/$3")).getTime();
+      var x = setInterval(function () {
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        timerElement.innerHTML = "Time Left: " + days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+        // Check if the countdown has ended
+        if (distance < 0) {
+          clearInterval(x);
+          timerElement.innerHTML = "Registration Closed!";
+          registerElement.innerHTML = "";
+
+        } else {
+          registerElement.innerHTML = "Click Here to Register!";
+        }
+      }, 1000);
+    }
+
+    // Get all elements with the class "btn-status"
+    var elementsWithBtnStatusClass = document.querySelectorAll(".btn-status");
+
+    // Loop through the elements and call updateCountdown for each
+    elementsWithBtnStatusClass.forEach(function (element) {
+      var endDate = element.querySelector(".reverse-time-counter").getAttribute("data-date");
+      var timerElement = element.querySelector(".timer");
+      var registerElement = element.querySelector(".register-text");
+
+      // Call updateCountdown for each element
+      updateCountdown(endDate, timerElement, registerElement, element);
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

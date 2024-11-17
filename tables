@@ -1,0 +1,32 @@
+CREATE DATABASE IF NOT EXISTS club;
+USE club;
+
+CREATE TABLE IF NOT EXISTS register (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    usn VARCHAR(30) NOT NULL,
+    fullname VARCHAR(30) NOT NULL,
+    password VARCHAR(30) NOT NULL,
+    phone VARCHAR(30) NOT NULL,
+    email VARCHAR(30) NOT NULL,
+    year ENUM('1st Year', '2nd Year', '3rd Year', '4th Year') NOT NULL,
+    club ENUM('Technical Club', 'Cultural Club', 'Social Club', 'Sports Club') NOT NULL,
+    credits VARCHAR(30),
+    whatsapp VARCHAR(30),
+    instagram VARCHAR(30),
+    linkedin VARCHAR(30),
+    github VARCHAR(30),
+    gender ENUM('Male', 'Female'),
+    profilepicture BLOB,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS events (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    phone VARCHAR(30) NOT NULL,
+    eventname VARCHAR(30) NOT NULL,
+    creditsgot VARCHAR(30) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+-- register.php login.php profile.html header.css profile.php

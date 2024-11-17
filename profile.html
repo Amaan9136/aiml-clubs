@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>My Profile</title>
+  <link rel="icon" href="img/AIML LOGO WHITE.png" type="png">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="MobileOptimized" content="320">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/preloader.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgb(31, 31, 31);
+      /* Set background with opacity */
+      z-index: -1;
+    }
+
+    .list-group {
+      background-color: #ff2222;
+    }
+
+    .content {
+      margin-top: 4.5rem;
+    }
+
+    .card {
+      margin-bottom: 1.5rem;
+      max-width: 100%;
+    }
+
+    .col-sm-3 {
+      margin-bottom: 8px;
+    }
+
+    #showupdateprofile {
+      display: none;
+    }
+
+    .mb-0,
+    .f14,
+    input {
+      font-size: 14px !important;
+    }
+
+    .header-logo {
+      border-radius: 0px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="text-white">
+      <img class="header-logo" src="img/AIML LOGO WHITE.png" alt="Logo">
+      My Profile
+    </div>
+    <nav class="header-menu-for-desktop">
+
+      <div class="dropdown text-white">
+        <a href="index.html" class="text-white a-text">Home</a>
+        <a href="#" class="text-white a-text">Profile</a>
+        <a href="#events" class="text-white a-text">Events Participated ▼</a>
+        <a href="login.html" class="text-white a-text">Logout</a>
+        <!-- add more -->
+      </div>
+
+    </nav>
+
+    <div class="header-menu-for-mobile">
+      <img src="img/menu.png" alt="Menu" onclick="toggleMenu()">
+      <div class="menu-items">
+
+        <a href="index.html" class="text-white a-text">Home</a>
+        <a href="#" class="text-white a-text">Profile</a>
+        <a href="#events" class="text-white a-text">Events Participated ▼</a>
+        <hr class="hr-menu">
+        <a href="login.html" class="text-white a-text">Logout</a>
+        <!-- add more -->
+
+      </div>
+    </div>
+  </header>
+
+  <div class="content content2">
+    <div class="container">
+      <div class="main-body">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="card" id="profile">
+              <div id="alert-div2">
+                <div id="alert-message2" class="alert alert-success fade show" role="alert"></div>
+              </div>
+              <div id="alert-div1">
+                <div id="alert-message1" class="alert text-danger bg-white fade show" role="alert"></div>
+              </div>
+              <div class="card-body">
+                <div class="d-flex flex-column align-items-center text-center">
+                  <!-- use avatar8 for women -->
+                  <img src="https://bootdey.com/img/Content/avatar/avatar7.png" id="img" alt="Admin"
+                    class="rounded-circle p-1 bg-primary" width="140">
+                  <div class="mt-3">
+                    <h4 id="nameval" class="m-2px bolder mb-1">Amaan M.K <i
+                        class=" fa fa-id-card-alt text-primary me-2"></i>
+                    </h4>
+                    <p id="club" class="bolder">Technical Club</p>
+                    <p class="text-muted f14 pt-0">
+                      <span id="post">Club's Member</span> -
+                      <span id="usn">4AI21AI006</span>
+                    </p>
+                    <p class="text-primary bg-white m-2 bolder">
+                      <i class="fas fa-credit-card text-primary me-2"></i>Credits: <span id="credits">0</span>
+                    </p>
+                    <button id="showUpdateProfileButton" class="btn btn-primary pt-1 pb-1">Edit
+                      Profile</button>
+                  </div>
+                </div>
+                <hr class="my-4">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                    <h6 class="mb-0"><i class="fas fa-phone-alt text-primary me-2"></i>Phone</h6>
+                    <a class="text-secondary f14" id="phoneval" href="tel:+918867305645" target="_blank">+91
+                      8867305645</a>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                    <h6 class="mb-0"><i class="fas fa-envelope text-primary me-2"></i>Email</h6>
+                    <a class="text-secondary f14" id="emailval" href="mailto:syedkhalander66@.com"
+                      target="_blank">syedkhalander66@.com</a>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                    <h6 class="mb-0"><i class="fab fa-whatsapp text-success me-2"></i>WhatsApp</h6>
+                    <a class="text-secondary f14" id="whatsappval" href="https://wa.me/917353346164" target="_blank">+91
+                      7353346164</a>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                    <h6 class="mb-0"><i class="fab fa-instagram text-danger me-2"></i>Instagram</h6>
+                    <a class="text-secondary f14" id="instaval" href="https://instagram.com/amaan.m.k"
+                      target="_blank">amaan.m.k</a>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                    <h6 class="mb-0"><i class="fab fa-linkedin-in me-2"></i>Linked In</h6>
+                    <a class="text-secondary f14" id="linkedinval" href="https://www.linkedin.com/in/amaanmk"
+                      target="_blank">amaanmk</a>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                    <h6 class="mb-0"><i class="fab fa-github me-2"></i>GitHub</h6>
+                    <a class="text-secondary f14" id="githubval" href="https://github.com/amaan9136"
+                      target="_blank">amaan9136</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <div class="card" id="showupdateprofile" style="padding-top: 8px;">
+              <div class="card-body">
+                <form id="updateProfileForm" action="php/profile.php" method="POST" enctype="multipart/form-data">
+                  <div class="row mb-3">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Profile Picture</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      <input type="file" class="form-control" id="profilepicture" name="profilepicture"
+                        accept="image/*">
+                      <span class="f14">Choose 140x140px image for good quality</span>
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Full Name</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      <input type="text" class="form-control" id="name" name="name" placeholder="Change Name">
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Email ID</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      <input type="email" class="form-control" id="email" name="email" placeholder="Change Email">
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Phone Number</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      <input type="tel" class="form-control" id="phone" name="phone" placeholder="Change Phone Number">
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Change Password</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      <input type="password" class="form-control" id="password" name="password"
+                        placeholder="Change Password">
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">WhatsApp Number</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      <input type="tel" class="form-control" id="whatsapp" name="whatsapp"
+                        placeholder="Change WhatsApp Number">
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Instagram Username</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      <input type="text" class="form-control" id="insta" name="insta"
+                        placeholder="Change Instagram Username">
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">LinkedIn Username</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      <input type="text" class="form-control" id="linkedin" name="linkedin"
+                        placeholder="Change LinkedIn Username">
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">GitHub Username</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      <input type="text" class="form-control" id="github" name="github"
+                        placeholder="Change GitHub Username">
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Gender</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      <select class="form-control" id="gender" name="gender">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-9 text-secondary">
+                      <input type="submit" class="btn btn-primary px-4 btn-submit" id="savechanges"
+                        value="Save Changes">
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="row" id="events">
+              <div class="col-sm-12">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="d-flex align-items-center mb-3" style="font-size: 18px;">Events Participated:</h5>
+                    <p class="f14">Web Design</p>
+                    <div class="progress mb-3" style="height: 5px">
+                      <div class="progress-bar bg-primary" role="progressbar" style="width: 99%;"></div>
+                    </div>
+                    <p class="f14">Website Markup</p>
+                    <div class="progress mb-3" style="height: 5px">
+                      <div class="progress-bar bg-danger" role="progressbar" style="width: 72%"></div>
+                    </div>
+                    <p class="f14">One Page</p>
+                    <div class="progress mb-3" style="height: 5px">
+                      <div class="progress-bar bg-success" role="progressbar" style="width: 89%"></div>
+                    </div>
+                    <p class="f14">Mobile Template</p>
+                    <div class="progress mb-3" style="height: 5px">
+                      <div class="progress-bar bg-warning" role="progressbar" style="width: 55%"></div>
+                    </div>
+                    <p class="f14">Backend API</p>
+                    <div class="progress" style="height: 5px">
+                      <div class="progress-bar bg-info" role="progressbar" style="width: 66%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- header js -->
+  <script>
+    // Function to scroll to the target container with dynamic margin
+    function scrollToContainerWithMargin(containerId) {
+      const headerHeight = document.querySelector('.header').clientHeight;
+      const container = document.getElementById(containerId);
+
+      if (container) {
+        const marginTop = window.innerWidth <= 768 ? -50 : -55; // Adjust margin based on device width
+        const scrollPosition = container.offsetTop - headerHeight - marginTop;
+
+        window.scrollTo({
+          top: scrollPosition,
+          behavior: 'smooth'
+        });
+      }
+    }
+    document.addEventListener('DOMContentLoaded', function () {
+      const menuLinks = document.querySelectorAll('.dropdown-content a');
+
+      function addClickEvent(links) {
+        links.forEach(link => {
+          link.addEventListener('click', function (event) {
+            event.preventDefault();
+            const target = link.getAttribute('href');
+            if (target && target !== '#') {
+              const targetID = target.replace('#', '');
+              scrollToContainerWithMargin(targetID);
+
+              if (target.endsWith('.html')) {
+                window.location.href = target;
+              }
+            }
+
+            if (window.innerWidth <= 768) {
+              toggleMenu(); // Close mobile menu after clicking the link on mobile
+            }
+          });
+        });
+      }
+      addClickEvent(menuLinks);
+    });
+
+
+    // Function to toggle mobile menu
+    function toggleMenu() {
+      var menuItems = document.querySelector('.menu-items');
+      var menuIcon = document.querySelector('.header-menu-for-mobile img');
+
+      menuItems.classList.toggle('show');
+      menuIcon.src = menuItems.classList.contains('show') ? 'img/menuclose.png' : 'img/menu.png';
+
+      if (menuItems.classList.contains('show')) {
+        for (var i = 0; i < menuTextItems.length; i++) {
+          menuTextItems[i].style.display = 'block';
+        }
+        // Ensure that the "Home" link is always visible when the menu is opened
+        document.querySelector('.menu-items a[href="#"]').style.display = 'block';
+      } else {
+        for (var i = 0; i < menuTextItems.length; i++) {
+          menuTextItems[i].style.display = 'none';
+        }
+      }
+    }
+
+    var menuTextItems = document.querySelectorAll('.menu-items a');
+    // Hide all menu items initially
+    for (var i = 0; i < menuTextItems.length; i++) {
+      menuTextItems[i].style.display = 'none';
+    }
+
+    var dropdownButtons = document.getElementsByClassName('dropbtn');
+    var dropdownContents = document.getElementsByClassName('dropdown-content');
+
+    for (var i = 0; i < dropdownButtons.length; i++) {
+      var dropdownButton = dropdownButtons[i];
+      var dropdownContent = dropdownContents[i];
+
+      dropdownButton.addEventListener('click', function (event) {
+        event.stopPropagation();
+        toggleDropdown(this.nextElementSibling);
+      });
+
+      dropdownButton.addEventListener('mouseover', function (event) {
+        toggleDropdown(this.nextElementSibling);
+      });
+
+      dropdownContent.addEventListener('mouseover', function (event) {
+        toggleDropdown(this);
+      });
+    }
+
+    document.addEventListener('mousemove', function (event) {
+      var dropdowns = document.getElementsByClassName('dropdown-content');
+      var isInsideDropdown = false;
+
+      for (var i = 0; i < dropdowns.length; i++) {
+        var dropdown = dropdowns[i];
+
+        if (dropdown.contains(event.target)) {
+          isInsideDropdown = true;
+          break;
+        }
+      }
+
+      if (!isInsideDropdown && !isCloseToDropdown(event)) {
+        closeDropdowns();
+      }
+    });
+
+    document.addEventListener('click', function (event) {
+      var dropdowns = document.getElementsByClassName('dropdown-content');
+      var isInsideDropdown = false;
+
+      for (var i = 0; i < dropdowns.length; i++) {
+        var dropdown = dropdowns[i];
+
+        if (dropdown.contains(event.target)) {
+          isInsideDropdown = true;
+          break;
+        }
+      }
+
+      if (!isInsideDropdown) {
+        closeDropdowns();
+      }
+    });
+
+    function toggleDropdown(dropdown) {
+      closeDropdowns();
+
+      if (dropdown.style.display === 'none') {
+        dropdown.style.display = 'block';
+      }
+    }
+
+    function closeDropdowns() {
+      var dropdowns = document.getElementsByClassName('dropdown-content');
+
+      for (var i = 0; i < dropdowns.length; i++) {
+        var dropdown = dropdowns[i];
+        dropdown.style.display = 'none';
+      }
+    }
+
+    function isCloseToDropdown(event) {
+      var dropdowns = document.getElementsByClassName('dropdown-content');
+
+      for (var i = 0; i < dropdowns.length; i++) {
+        var dropdown = dropdowns[i];
+        var dropdownRect = dropdown.getBoundingClientRect();
+        var mouseX = event.clientX;
+        var mouseY = event.clientY;
+
+        if (
+          mouseX >= dropdownRect.left - 50 &&
+          mouseX <= dropdownRect.right + 50 &&
+          mouseY >= dropdownRect.top - 50 &&
+          mouseY <= dropdownRect.bottom + 50
+        ) {
+          return true;
+        }
+      }
+
+      return false;
+    }
+
+    // Event listener to close the mobile menu when clicked outside
+    document.addEventListener('click', function (event) {
+      var menuItems = document.querySelector('.menu-items');
+      var menuIcon = document.querySelector('.header-menu-for-mobile img');
+
+      if (menuItems.classList.contains('show')) {
+        if (!event.target.closest('.header-menu-for-mobile') && !event.target.closest('.menu-items')) {
+          menuItems.classList.remove('show');
+          var menuTextItems = document.querySelectorAll('.menu-items a');
+          for (var i = 0; i < menuTextItems.length; i++) {
+            menuTextItems[i].style.display = 'none';
+          }
+          menuIcon.src = 'img/menu.png';
+          menuIcon.classList.remove('hide'); // Show the menu button
+        }
+      }
+    });
+  </script>
+
+  <!-- JS -->
+  <script>
+    const showUpdateProfileButton = document.getElementById('showUpdateProfileButton');
+    const profileCard = document.getElementById('profile');
+    const showUpdateProfileDiv = document.getElementById('showupdateprofile');
+    const savechanges = document.getElementById('savechanges');
+    const emptyCol = document.querySelector('.col-lg-4');
+    const profilePictureInput = document.getElementById('profilepicture');
+
+    showUpdateProfileButton.addEventListener('click', () => {
+      const isHidden = showUpdateProfileDiv.style.display === 'none' || showUpdateProfileDiv.style.display === '';
+      showUpdateProfileDiv.style.display = isHidden ? 'block' : 'none';
+      profileCard.style.display = isHidden ? 'none' : 'block';
+      emptyCol.style.display = isHidden ? 'none' : 'block';
+    });
+
+    savechanges.addEventListener('click', (e) => {
+      e.preventDefault();
+      showUpdateProfileDiv.style.display = 'none';
+      profileCard.style.display = 'block';
+      emptyCol.style.display = 'block';
+
+
+    });
+
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const updateProfileForm = document.getElementById('updateProfileForm');
+      const saveChangesButton = document.getElementById('savechanges');
+      const alertMessage1 = document.getElementById('alert-message1');
+      const alertMessage2 = document.getElementById('alert-message2');
+
+      saveChangesButton.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        // Create a FormData object to capture form data
+        const formData = new FormData(updateProfileForm);
+
+        // Create an XMLHttpRequest object
+        const xhr = new XMLHttpRequest();
+
+        // Define the PHP file URL to which you want to send the data
+        const phpUrl = 'php/profile.php';
+
+        // Configure the request
+        xhr.open('POST', phpUrl, true);
+
+        // Set up a callback function to handle the response from the PHP file
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+              // Parse the JSON response
+              const response = JSON.parse(xhr.responseText);
+
+              if (response.success) {
+                // Update the HTML elements with the received data if they exist in the response
+                if (response.name) {
+                  document.getElementById('nameval').textContent = response.name;
+                }
+                if (response.club) {
+                  document.getElementById('club').textContent = response.club;
+                }
+                if (response.phone) {
+                  document.getElementById('phoneval').textContent = response.phone;
+                }
+                if (response.email) {
+                  document.getElementById('emailval').textContent = response.email;
+                }
+                if (response.whatsapp) {
+                  document.getElementById('whatsappval').textContent = response.whatsapp;
+                }
+                if (response.instagram) {
+                  document.getElementById('instaval').textContent = response.instagram;
+                }
+                if (response.linkedin) {
+                  document.getElementById('linkedinval').textContent = response.linkedin;
+                }
+                if (response.github) {
+                  document.getElementById('githubval').textContent = response.github;
+                }
+
+                if (response.profilePictureUrl) {
+                  const selectedFile = profilePictureInput.files[0];
+                  const imgElement = document.getElementById('img');
+
+                  if (selectedFile) {
+                    const reader = new FileReader();
+                    reader.onload = () => {
+                      imgElement.src = reader.result;
+                      imgElement.style.width = '140px';
+                      imgElement.style.height = '140px';
+                    };
+                    reader.readAsDataURL(selectedFile);
+                  }
+                }
+
+                if (response.message) {
+                  // Display the success message in the appropriate div
+                  alertMessage2.textContent = response.message;
+                  alertMessage2.style.display = 'block';
+
+                  // Hide the success message after 3 seconds
+                  setTimeout(function () {
+                    alertMessage2.style.display = 'none';
+                  }, 3000);
+                }
+              } else {
+                if (response.message) {
+                  // Display the error message in the appropriate div
+                  alertMessage1.textContent = response.message;
+                  alertMessage1.style.display = 'block';
+
+                  // Hide the error message after 3 seconds
+                  setTimeout(function () {
+                    alertMessage1.style.display = 'none';
+                  }, 5000);
+                }
+              }
+            }
+          }
+        };
+
+        // Send the FormData
+        xhr.send(formData);
+      });
+    });
+
+  </script>
+</body>
+
+</html>

@@ -6,6 +6,7 @@ This repository represents the **first-year project** developed to manage and sh
 
 ### Clubs Management
 - Dedicated sections for each of the four AIML department clubs, highlighting their events, members, and activities.
+- This project was also converted into mobile app
 
 ### News and Announcements
 - A centralized platform for sharing news, updates, and achievements from the clubs.
